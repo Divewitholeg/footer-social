@@ -1,12 +1,12 @@
-# Responsive and Language Aware Vue 3 Footer
+# A Responsive and Language-Aware Footer Component for Vue 3
 
-This is a responsive and language aware footer component for Vue 3. Blogging in several languages inevitably brings you to the point where you have a lot of accounts and links to share. Many of these social platforms are language specific or target either a mobile or desktop only audience. After a scurpulous review I have come up with 30! accounts on various platforms where I blog, communicate and share my work. This footer component is designed to be responsive and language aware. It will display the appropriate social links and icons based on the language and device type (by screen width).
+Are you a blogger or content creator who operates in several languages? Do you have a multitude of social media accounts you need to share? Then you'll appreciate this responsive and language-aware footer component for Vue 3!
+
+This footer component is designed to be user-friendly, responsive, and customizable, displaying the appropriate social links and icons based on the language and device type. The footer layout is minimalistic to keep the user's focus on the main content. It is straightforward and easy to use, and the responsiveness of the footer ensures that it looks good on any device and screen size.
 
 ## Data
 
-I deliberately chose a minimalistic layout for this footer. I wanted to keep it simple and not distract the user from the content of the page to explain how to build components in a way that is easy to understand and use. I have also tried to make it as responsive as possible. It should look good on any device and screen size.
-
-Data for languages and social links is stored in the `data` folder in json files. Languages are stored in an array of objects. Each object has a `value` representing the first two letters of a language code. The `name` of the language expressed in the characters of that language is stored under the `text` property and the flag emoji is stored under the flag property:
+The languages and social links data for this footer component are stored in JSON files in the data folder. The language.json file contains an array of objects, each representing a language. The value property of each language object represents the first two letters of a language code, and the text property stores the name of the language in its native script. The flag property stores the flag emoji of the corresponding country.
 
 ```json
 [
@@ -24,7 +24,7 @@ Data for languages and social links is stored in the `data` folder in json files
 ]
 ```
 
-The `social.json` file below contains an array of objects. Each object represents a social link. The `icon` property is the name of the svg file in the assets folder. The `name` property is the name of the social platform. The `url` property is the link to the social platform. The `tags` property is an array of strings. The strings represent the languages for which the link is displayed. The string `all` means that the link is displayed for all languages. The string `desktop` means that the link is displayed only on desktop devices. The string `mobile` means that the link is displayed only on mobile devices.
+Below you will find the `social.json` file, which is home to an array of objects. Each object serves as a representation of a social link. The `icon` property holds the name of the corresponding SVG file in the assets folder, while the `name` property contains the name of the social platform itself. The `url` property, on the other hand, keeps track of the link to the social platform. Lastly, the `tags` property is an array of strings that showcase the languages the link is displayed for. If the string is `all`, then the link is visible for all languages. If the string is `desktop`, then the link will only show on desktop devices. Similarly, if the string is `mobile`, then the link will only display on mobile devices.
 
 ```json
 [
@@ -52,7 +52,9 @@ The `social.json` file below contains an array of objects. Each object represent
 
 ## Language Select Component
 
-The language select component is a simple select element. The `lang.json` file is imported and the `langs` array is assigned to it. The `lang` variable is initialized with the value `en`. The `lang` variable is bound to the `v-model` of the select element. The `language.value` variable is passed to the parent component via the `lang` event. The `lang` event is emitted when the user selects a language from the select element.
+Let me walk you through the language select component. It's a straightforward select element that is linked to the lang.json file, which holds an array of languages assigned to the langs variable. By default, the lang variable is set to en. This lang variable is then bound to the v-model of the select element, allowing users to switch between available language options easily.
+
+When a user selects a language from the dropdown, the lang event is triggered, and the selected language value is passed on to the parent component via the language.value variable. This way, the chosen language setting can be used throughout the entire application.
 
 ```vue
 <script setup>
@@ -82,11 +84,11 @@ defineEmits(["lang"]);
 
 ## Footer Component
 
-Consists of `FooterMobile.vue` and `FooterDesktop.vue` components.
+Let's delve into the Footer Component, which comprises two components - `FooterMobile.vue` and `FooterDesktop.vue`.
 
 ### FooterMobile.vue
 
-The `FooterMobile.vue` component is a simple div element styled with TailwindCSS. The `v-for` directive iterates over the `social` array passed to the component as a prop and defining each object in the `social` array as `link`. The `v-if` directive checks if the `link.tags` array includes the string `mobile` and if the `link.tags` array includes the string `all` (for all languages) or the `lang` variable (for each specific language). If the `v-if` directive evaluates to `true` the `div` element with the corresponding social media icon and reference is displayed. The `a` element has a `href` attribute with the value of the `link.url` variable. The `img` element has a `src` attribute with the value of the `link.icon` variable. The `alt` attribute has the value of the `link.name` variable.
+Starting with `FooterMobile.vue`, it's a simple div element styled using TailwindCSS. The component receives the `social` array as a prop, which is iterated using the `v-for` directive. Each object in the `social` array is defined as `link`. To display the social media links based on the user's language settings, the `v-if` directive checks whether the `link.tags` array includes the string `mobile`, and if it includes the string `all` (for all languages) or the `lang` variable (for each specific language). If the v-if directive evaluates to `true`, the `div` element with the corresponding social media icon and reference is displayed. The `a` element has an `href` attribute with the value of the `link.url` variable, and the `img` element has a `src` attribute with the value of the `link.icon` variable. The `alt` attribute has the value of the `link.name` variable, which is essential for web accessibility.
 
 ```vue
 <script setup>
