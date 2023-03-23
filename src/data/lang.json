@@ -1,0 +1,8 @@
+[
+  { "value": "en", "text": "English", "flag": "🇺🇸" },
+  { "value": "ru", "text": "Русский", "flag": "🇷🇺" },
+  { "value": "et", "text": "Eesti", "flag": "🇪🇪" },
+  { "value": "vi", "text": "Tiếng Việt", "flag": "🇻🇳" },
+  { "value": "zh", "text": "中文", "flag": "🇨🇳" },
+  { "value": "de", "text": "Deutsch", "flag": "🇩🇪" }
+]

@@ -1,0 +1,122 @@
+[
+  {
+    "icon": "facebook.svg",
+    "name": "Facebook",
+    "url": "https://www.facebook.com/vuewebdev",
+    "tags": ["en", "de", "vi", "et", "desktop"]
+  },
+  {
+    "icon": "twitter.svg",
+    "name": "Twitter",
+    "url": "https://twitter.com/DiveWithOleg",
+    "tags": ["en", "de", "vi", "et", "desktop"]
+  },
+  {
+    "icon": "github.svg",
+    "name": "GitHub",
+    "url": "https://github.com/Divewitholeg",
+    "tags": ["all", "desktop"]
+  },
+  {
+    "icon": "linkedin.svg",
+    "name": "LinkedIn",
+    "url": "https://www.linkedin.com/in/olegrybnikov/",
+    "tags": ["all", "desktop"]
+  },
+  {
+    "icon": "quora.svg",
+    "name": "Quora",
+    "url": "https://www.quora.com/profile/Oleg-Rybnikov-1",
+    "tags": ["en", "de", "vi", "et", "desktop"]
+  },
+  {
+    "icon": "stack-overflow.svg",
+    "name": "Stack Overflow",
+    "url": "https://stackoverflow.com/users/20284583/oleg-rybnikov",
+    "tags": ["all", "desktop"]
+  },
+  {
+    "icon": "youtube.svg",
+    "name": "YouTube",
+    "url": "",
+    "tags": ["en", "de", "vi", "et", "desktop"]
+  },
+  {
+    "icon": "medium.svg",
+    "name": "Medium",
+    "url": "https://medium.com/@rybniko",
+    "tags": ["en", "de", "vi", "et", "desktop"]
+  },
+  {
+    "icon": "dev.svg",
+    "name": "Dev.to",
+    "url": "https://dev.to/divewitholeg",
+    "tags": ["en", "de", "vi", "et", "desktop"]
+  },
+  {
+    "icon": "codepen.svg",
+    "name": "CodePen",
+    "url": "https://codepen.io/Oleg-Rybnikov",
+    "tags": ["all", "desktop"]
+  },
+  {
+    "icon": "mastodon.svg",
+    "name": "Mastodon",
+    "url": "https://mastodon.social/@vuewebdev",
+    "tags": ["all", "desktop"]
+  },
+  {
+    "icon": "telegram.svg",
+    "name": "Telegram",
+    "url": "https://t.me/contactOleg",
+    "tags": ["ru", "mobile"]
+  },
+  {
+    "icon": "whatsapp.svg",
+    "name": "WhatsApp",
+    "url": "https://wa.me/37256045484",
+    "tags": ["en", "de", "vi", "et", "mobile"]
+  },
+  {
+    "icon": "envelope-solid.svg",
+    "name": "Email",
+    "url": "mailto:rybniko@gmail.com",
+    "tags": ["all", "mobile", "desktop"]
+  },
+  {
+    "icon": "phone-volume-solid.svg",
+    "name": "Phone",
+    "url": "tel:+37256045484",
+    "tags": ["all", "mobile"]
+  },
+  {
+    "icon": "skype.svg",
+    "name": "Skype",
+    "url": "skype:live:oleg.rybnikov?chat",
+    "tags": ["all", "desktop"]
+  },
+  {
+    "icon": "viber.svg",
+    "name": "Viber",
+    "url": "viber://chat?number=%2B37256045484",
+    "tags": ["all", "mobile"]
+  },
+  {
+    "icon": "weixin.svg",
+    "name": "WeChat",
+    "url": "weixin://dl/chat?weixinid=wxid_njca4mdlb63v22",
+    "tags": ["zh", "mobile"]
+  },
+  {
+    "icon": "facebook-messenger.svg",
+    "name": "Messenger",
+    "url": "https://m.me/oleg.rybnikov",
+    "tags": ["en", "de", "vi", "et", "mobile"]
+  },
+  {
+    "icon": "vk.svg",
+    "name": "VKontakte",
+    "url": "https://vk.com/divewitholeg",
+    "tags": ["ru", "desktop", "mobile"]
+  }
+]
