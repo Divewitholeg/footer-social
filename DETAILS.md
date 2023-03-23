@@ -256,3 +256,8 @@ function changeLang(newLang) {
 ## Conclusion
 
 Hope you will find this way of creating responsive and language sensitive footer useful. If you have any questions or suggestions, please leave a comment below. Also, would be nice to know what solution you are using for displaying social media links in your footer. Thanks for reading!
+
+[e-mail]: mailto:rybniko@gmail.com
+[github]: https://github.com/Divewitholeg
+[linkedin]: https://www.linkedin.com/in/olegrybnikov/
+[facebook]: https://www.facebook.com/vuewebdev
