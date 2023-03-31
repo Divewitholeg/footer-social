@@ -1,11 +1,10 @@
 <script setup>
-import NavigationLanguageSelect from "./components/NavigationLanguageSelect.vue";
 import { useWindowSize } from "@vueuse/core";
-import { ref } from "vue";
-import { defineAsyncComponent } from "vue";
+import { ref, defineAsyncComponent } from "vue";
+import NavigationLanguageSelect from "./components/NavigationLanguageSelect.vue";
 import socialMedia from "./data/social.json";
 
-const social = Object.assign(socialMedia);
+const social = [...socialMedia];
 const FooterMobile = defineAsyncComponent(() =>
   import("./components/FooterMobile.vue")
 );
@@ -14,16 +13,14 @@ const FooterDesktop = defineAsyncComponent(() =>
 );
 const { width } = useWindowSize();
 const lang = ref("en");
-function changeLang(newLang) {
+function changeLang (newLang) {
   lang.value = newLang;
 }
 </script>
 
 <template>
   <div class="bg-pink-300">
-    <nav
-      class="fixed top-0 h-12 w-screen flex items-center justify-between z-10 bg-pink-300"
-    >
+    <nav class="fixed top-0 h-12 w-screen flex items-center justify-between z-10 bg-pink-300">
       <div class="ml-3">
         <img
           src="./assets/logo200black.svg"
@@ -37,13 +34,15 @@ function changeLang(newLang) {
       </div>
     </nav>
     <main class="h-screen mt-12 mb-10 [&>p]:m-6 [&>p]:p-2 [&>p]:leading-6">
-      <h1 class="text-xl text-center m-6">Oleg Rõbnikov Web Development</h1>
+      <h1 class="text-xl text-center m-6">
+        Oleg Rõbnikov Web Development
+      </h1>
       <h2 class="text-lg text-center m-4">
         Responsive and Language Sensitive Footer
       </h2>
       <p>
-        Current language is changed to <strong>{{ lang }}</strong
-        >. Please note that language select doesn't change the language of this
+        Current language is changed to <strong>{{ lang }}</strong>. Please note that language select doesn't change the
+        language of this
         text. It is there to demonstrate how the footer changes based on the
         language selected.
       </p>
@@ -68,7 +67,12 @@ function changeLang(newLang) {
         v-if="width < 769"
         :lang="lang"
         :social="social"
-      /><FooterDesktop v-else :lang="lang" :social="social" />
+      />
+      <FooterDesktop
+        v-else
+        :lang="lang"
+        :social="social"
+      />
     </footer>
   </div>
 </template>
