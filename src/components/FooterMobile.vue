@@ -2,21 +2,24 @@
 const props = defineProps({
   lang: {
     type: String,
-    required: true,
+    required: true
   },
   social: {
     type: Array,
-    required: true,
-  },
+    required: true
+  }
 });
 </script>
 <template>
   <div class="flex justify-center my-2">
-    <div v-for="link in social" :key="link.url">
+    <div
+      v-for="link in social"
+      :key="link.url"
+    >
       <div
         v-if="
           link.tags.includes('mobile') &&
-          (link.tags.includes('all') || link.tags.includes(lang))
+            (link.tags.includes('all') || link.tags.includes(lang))
         "
         class="mx-3"
       >
@@ -26,7 +29,8 @@ const props = defineProps({
             :alt="link.name"
             width="25"
             height="25"
-        /></a>
+          />
+        </a>
       </div>
     </div>
   </div>
